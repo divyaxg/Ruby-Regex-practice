@@ -1,0 +1,40 @@
+
+
+# All the Website information about the restaurants are taken from Yelp
+#
+#Salt and Straw http://www.yelp.com/biz/salt-and-straw-los-angeles
+
+#Smitty’s Famous Fish and Chicken  http://www.yelp.com/biz/smittys-famous-fish-and-chicken-culver-city
+
+#Zankou Chicken http://www.yelp.com/biz/zankou-chicken-anaheim
+
+#Chego  http://www.yelp.com/biz/chego-los-angeles-5
+
+#Ambala Dhaba (in Los Angeles) http://www.yelp.com/biz/ambala-dhaba-homestyle-indian-los-angeles
+
+#Colony Cafe http://www.yelp.com/biz/the-colony-cafe-los-angeles
+
+
+
+
+#For Phone number 
+	(?<phone number>\W\d{3}[\W\s\d-]{10})
+
+
+#For street address
+	(?<Street Address>^(\d{3,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})$)
+ 
+# For city, state, and zipcode
+	(?<city>^\w[a-z]{1,20}\s*\w*[a-z])\S(?<state>\s*\w[A-z]\s*)(?<zipcode>\d{5,})
+
+#for Wifi access
+	^Wi-Fi(?<wifi available>\s\w+)
+
+#for catering
+	^Caters(?<catering available>\s\w+)
+
+#For credit card accepted
+	^Credit Cards(?<credit cards accepted>\s\w+)
+
+#For Parking information
+	^Parking(?<Parking available>\s\S*\s*\S*\s*\S*)
